@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*旅游线路样式*/
+
+
+/*线路详情页行程日历*/
+.calendar{border: 1px solid #CCC;border-radius: 3px;margin: 0; padding: 10px 12px;width: 514px; }
+.calendar .outer{width: 546px;}
+.calendar table{background: #FFF;border-collapse: collapse;border-spacing: 3px;display: inline;float: left;margin-right: 10px;width: 516px;}
+.calendar .week th{background: #B1B1B1;color: #FFF; border-radius: 4px; height: 26px;line-height: 26px;overflow: hidden;width: 63px;text-align: center; }
+.calendar .week th.weekEnd{background: #8bbafe; border-radius: 4px;}
+.calendar .month th div{background: #FFF;border-bottom: 1px solid #D5D5D5;box-shadow: 0 1px 2px #DDD; border-radius: 4px; color: #999;font: bold 16px/22px "微软雅黑","宋体",Arial;height: 46px;margin-bottom: 6px;overflow: hidden;padding-bottom: 5px;}
+.calendar .month th .prevMonth,.calendar .month th .nextMonth{float: left;width: 63px;}
+.calendar .month th .dates{float: left;width: 390px;text-align: center;  ;}
+.calendar .month th .dates em{font: bold 16px/22px Arial,Helvetica,sans-serif;border-radius:6px}
+.calendar .month th a{ background: url(../images/inde_end_r_l_huise.png) no-repeat; background-position:40px 2px; display: inline-block;height: 46px;width: 63px;overflow: hidden;}
+.calendar .month th a.prev{ background: url(../images/index_end_left_right.png) no-repeat ; background-position:40px 2px; }
+/*.calendar .month th a.prev:hover{background-position: top left;}*/
+.calendar .month th a.next{ background: url(../images/index_end_left_right.png) no-repeat ; background-position:-18px 2px;}
+/*.calendar .month th a.next:hover{background:#8BBAFE;}*/
+.calendar .month th a.next0{background: url(../images/inde_end_r_l_huise.png) no-repeat; background-position: -18px 2px;cursor: not-allowed;}
+.calendar td{ background: #FFFFFF; border:1px #999999 solid; height: 54px;line-height: 18px;width:120px;text-align: center;vertical-align: middle; position: relative;}
+.calendar td.cur{ background-position: right -269px; position: relative;}
+.calendar td.hover{ background: #8BBAFE;cursor: pointer;}
+.calendar td.hover .cur_a_hover{ display: block;}
+.calendar td em{ font-family: Arial;font-size: 14px;}
+.calendar td em.money{ color: #F60;font-weight: bold;font-size: 14px;}
+
+/*more_than*/
+.day_a{ display: block; text-align: left; margin-left: 7px;}
+.more_than{ text-align: left; margin-left: 7px; font-family: "新宋体"; font-size: 12px;}
+.more_than span{ display: inline-block; }
+.more_than span:nth-child(2){ color: #fff; width: 14px; height: 14px; background: #ff9f14; line-height: 14px; border-radius: 2px; margin-left: 10px;}
+.more_than_price{ display: block; text-align: left; color: #ff5757; margin-left: 7px; font-family: "新宋体"; font-size: 12px;}
+.cur_a_hover{ padding-top: 4px; display: none; width: 88px; height: 124px; position: absolute; top: 57px; left: -28px; border:1px solid #bbbbbb; border-radius: 4px; background: #fff;  z-index: 6666;}
+.cur_a_hover li{ text-align: center; line-height: 20px; }
+.cur_a_hover img{ position: absolute; top: -7px; z-index: 1000;  line-height: 20px;}
+/*2017.3.16*/
+.hover_two{ background: #8BBAFE !important;}

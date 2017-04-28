@@ -1,0 +1,32 @@
+.free_visa{ min-height: 300px; width: 1030px; float: left; background:#FFffff;}
+.free_visa_top{ text-align: center; width: 1015px; height: 40px; background: #FFFFFF; border-radius: 3px 3px 0 0;border-bottom: 2px #e4e4e4 solid; padding-left: 15px;}
+.free_visa_top li{ float: left; text-align: center;}
+.free_visa_top li a{ font-size: 16px; font-family: "黑体"; color: #666666; line-height: 40px; font-weight: bold; }
+.free_visa_top li:nth-child(1){ width: 150px;}
+.free_visa_top li:nth-child(2){ width: 160px;}
+.free_visa_top li:nth-child(3){ width: 120px;}
+.free_visa_top li:nth-child(4){ width: 125px;}
+.free_visa_top li:nth-child(5){ width: 105px;}
+.free_visa_top li:nth-child(6){ width: 105px;}
+.free_visa_top li:nth-child(7){ width: 150px;}
+
+.free_visa_list{ width: 1030px; float: left; padding-bottom: 15px;}
+
+.free_visa_main{ height: 80px; border-bottom: 1px solid #eee; margin: 0 15px; width: 1000px; text-align: center;}
+.free_visa_main>div{ float: left; line-height: 80px; font-size: 14px; font-family: "黑体"; overflow: hidden; height: 80px;}
+.free_visa_main>div:nth-child(1){ width: 150px; font-size: 16px; font-family: "黑体"; color: #666666; font-weight: bold;}
+.free_visa_main>div:nth-child(2){ width: 160px;}
+.free_visa_main>div:nth-child(3){ width: 120px;}
+.free_visa_main>div:nth-child(4){ width: 125px;}
+.free_visa_main>div:nth-child(5){ width: 105px;}
+.free_visa_main>div:nth-child(6){ width: 105px; color: #fe0101;}
+.free_visa_main>div:nth-child(6) span{color: #fe0101; font-size: 16px; font-weight: bold;}
+.free_visa_main>div:nth-child(7){ width: 150px;}
+.free_visa_main>div:nth-child(8){ width: 85px;}
+
+.free_visa_main>div:nth-child(8) div a{ color: #428DFF; display: block; line-height: 25px; margin-top: 5px;}
+.free_visa_main>div:nth-child(8) div a:hover{ text-decoration: underline;}
+.free_visa_pro_details{ margin-top: 15px;}
+.free_visa_pro_details a{ border:1px solid #428DFF; padding: 2px; border-radius: 3px; margin-top: 5px;}
+.free_visa_pro_details a:hover{ border:1px solid #428DFF; background: #428DFF; color: #fff !important; padding: 2px; border-radius: 3px;}
+

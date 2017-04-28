@@ -1,0 +1,29 @@
+.order_hotel_a_a{ margin-bottom: 14px;}
+.order_hotel_a_a_a span:nth-child(1){ color:#448dff; font-size: 16px; font-family: "黑体"; margin-right: 18px; line-height: 26px;}
+.order_hotel_a_a_a span:nth-child(2){ margin-right: 18px;}
+.order_hotel_a_a_a span:nth-child(3){ }
+.order_hotel_a_a_a span:nth-child(4){ }
+.order_hotel_a_a_b{ color:#448dff;}
+
+.order_hotel_a_b{ margin-bottom: 14px;}
+.order_hotel_a_b_a{ display: block;}
+.order_hotel_a_b_a span{ float:left;font-size: 14px; line-height: 22px; color:#448dff;}
+.order_hotel_a_b_a img{ float: left;}
+.order_hotel_a_b_b{ display: block; font-size: 14px; color:#448dff;}
+
+.order_hotel_a_c{}
+.order_hotel_a_c div{ float: left; line-height: 23px;}
+.order_hotel_a_c>div:nth-child(1){ margin-right: 35px; color: #448dff;}
+.order_hotel_a_c>div:nth-child(2){ margin-right: 35px; color: #448dff;}
+.order_hotel_a_c>div:nth-child(3){ margin-right: 35px;}
+.order_hotel_a_c>div:nth-child(4){ margin-right: 35px; color: #448dff; position: relative; cursor: pointer; line-height: 23px; display: inline-block;}
+.order_hotel_a_c>div:nth-child(4):hover .oidl_aba_c_hover{ display: block;}
+.order_hotel_a_c>div:nth-child(5){ margin-right: 35px;}
+
+.order_index_down_right_a_b div{ line-height: 28px;}
+.order_hotel_a div{ float: left; margin-right: 10px;}
+
+.order_hotel_a_a span:nth-child(2){ color:#666666;}
+
+.yincangbeijing{ width: 100%; height: 100%; background: #000000 ; opacity: 0.2; position: fixed; top: 0; left: 0;z-index: 600; display: none;}
+.ditu{ position: fixed; top: 0; left: 0; right:0; bottom: 0; margin: auto; z-index: 1000; display: none; width: 1200px; height:600px;}

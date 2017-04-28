@@ -1,0 +1,78 @@
+.tracel_hotel_3lv{  text-align: left;}
+.travel_hotel_3lv_fx_bottom_a>div{ float: left;}
+.tracel_hotel_3lv_a_a{ float: left; font-family: "黑体"; font-size: 14px; line-height: 28px;}
+.tracel_hotel_3lv_a_b{ float: left; font-family: "黑体"; font-size: 14px; line-height: 28px; }
+.tracel_hotel_3lv_a_b_a{ color: #428fff; font-size: 14px; cursor: pointer;}
+.tracel_hotel_3lv_a_b_a img{ float: right; padding: 6px 0 0 10px; cursor: pointer;}
+.tracel_hotel_3lv_a_b_b{ color: #428fff; font-size: 14px;}
+.tracel_hotel_3lv_a{ font-family: "黑体"; font-size: 14px; line-height: 28px; }
+.tracel_hotel_3lv_b{ font-family: "黑体"; font-size: 14px; line-height: 28px; }
+.tracel_hotel_3lv_b>span a{ color: #428fff; font-size: 14px;}
+.tracel_hotel_3lv_c{ font-family: "黑体"; font-size: 14px; line-height: 28px; }
+.tracel_hotel_3lv_c>span{ font-size: 14px;}
+.tracel_hotel_3lv_d{ font-family: "黑体"; font-size: 14px; line-height: 28px; }
+.tracel_hotel_3lv_d span{ margin-right:24px; font-size: 14px;}
+
+.travel_hotel_3lv_top_sousuo { color: #e3393c; display: block; width: 44px; line-height: 26px; border: 1px #E3393C solid; border-radius: 4px;float: left;}
+.travel_hotel_3lv_top_sousuo:hover{ color: #FFFFFF; background: #E3393C;} 
+
+.travel_hotel_3lv_fx_top{ margin-top: 8px;}
+.travel_hotel_3lv_fx_top ul li{ float: left;}
+.tracel_hotel_3lv_yuding{ margin-top: 17px;}
+.travel_hotel_3lv_yd{ text-align: left; line-height: 48px;}
+.travel_hotel_3lv_yd>span:first-child{ font-weight: bold; font-size: 14px; font-family: "黑体";}
+.travel_hotel_3lv_yd>span:last-child{  font-size: 12px; font-family: "黑体"; color: #999999;}
+.travel_group_reserve_yd_a{}
+.free_hotel_room_k{ float: left; width:100px; line-height: 82px; margin-right:6px ;}
+.free_hotel_room_g{ margin-left: 26px;}
+.free_hotel_room_h{ margin-left: 8px;margin-right: 6px; }
+.free_hotel_room_h>span{ font-size: 14px;}
+
+.travel_hotel_3lv_fx_top{ background: #f8f8f8;}
+.travel_hotel_3lv_fx_top ul li{ float: left; text-align: center; line-height: 35px; font-family: "黑体"; font-size: 14px; color: #808080;margin-right: 5px;}
+.travel_hotel_3lv_fx_top li:nth-child(1){ width: 160px;}
+.travel_hotel_3lv_fx_top li:nth-child(2){ width: 100px;}
+.travel_hotel_3lv_fx_top li:nth-child(3){ width: 110px;}
+.travel_hotel_3lv_fx_top li:nth-child(4){ width: 100px;}
+.travel_hotel_3lv_fx_top li:nth-child(5){ width: 100px;}
+.travel_hotel_3lv_fx_top li:nth-child(6){ width: 100px;}
+.travel_hotel_3lv_fx_top li:nth-child(7){ width: 120px;}
+.travel_hotel_3lv_fx_top li:nth-child(8){ width: 100px;}
+.travel_hotel_3lv_fx_top li:nth-child(9){ width: 100px;}
+
+.free_hotel_room_i a{ margin-top: 10px;}
+
+.travel_group_content_all_a_c_hotel{ border-bottom:1px #F2F2F2 solid; padding: 12px 10px 12px 30px !important;}
+.travel_group_content_all_a_c_hotel>img{ float: left; margin-right: 10px;}
+.travel_translate_a_a{ line-height:28px;}
+.travel_translate_a_a_hotel{ line-height: 22px; color: #999999;}
+.travel_group_content_all_a_c_hotel span{ color: #999999;}
+.travel_translate_a_a_a>span{ line-height: 22px;}
+.travel_translate_a_a_b>span{ line-height: 22px;}
+.travel_translate_a_a_c>span{ line-height: 22px;}
+.travel_translate_a_a_d>span{ line-height: 22px;}
+.travel_translate_a_a_d span{ margin-right: 22px;}
+
+.travel_translate_a_a_a span{ margin-right: 35px;}
+.travel_translate_a_a_b span{ margin-right: 35px;}
+.travel_translate_a_a_c span{ margin-right: 35px;}
+
+.travel_translate_a_a_a>span:first-child{ font-family: "新宋体"; font-size: 12px; color: #656565;}
+.travel_translate_a_a_b>span:first-child{ font-family: "新宋体"; font-size: 12px; color: #656565;}
+.travel_translate_a_a_c>span:first-child{ font-family: "新宋体"; font-size: 12px; color: #656565;}
+.travel_translate_a_a_d>span:first-child{ font-family: "新宋体"; font-size: 12px; color: #656565;}
+
+
+.tracel_translate_b{ margin-top: -40px !important;}
+.free_hotel_room_i{ margin-top: 10px;}
+.tracel_translate_a_free_hotel_room_i{ float: left; margin-top: 20px;}
+.tracel_translate_a_free_hotel_room_i a{ display: block; line-height: 28px; border: 4px #88bdff solid; width: 106px; color: #4290fd; font-family: "黑体"; font-size: 12px;}
+.tracel_translate_a_free_hotel_room_i a:hover{ color: #FFFFFF; background: #86bdfd;}
+
+
+
+.beijingchufa{ float: left; margin-bottom: 10px;}
+.beijingchufa_zhonwen{ color: #ff9f15; font-size: 16px; line-height: 30px; font-family: "黑体";}
+.beijingchufa_yingwen{ color: #ff9f15; font-size: 16px; line-height: 20px; font-family: "黑体";}
+.travel_group_header_right_a{ height: 100px;}
+.travel_group_header_right_a_a_left_wangdan{ float: left; margin-top: 10px;}

@@ -1,0 +1,128 @@
+
+.freetrip{ background: #fff; width: 1280px; margin: 0 auto; padding: 5px 0 0;}
+
+.freetrip>ul{ margin-left: 120px;}
+.freetrip>ul li{ float: left;}
+.freetrip>ul li a:hover{ background: url(../images/select_beijing.fw.png) no-repeat bottom right; border: 1px solid #E3393C;}
+
+
+.freetrip>ul li a{ display: block; border: 1px solid #fff; padding: 0 20px; height: 32px; overflow: hidden; margin: 5px 3px; line-height: 32px; border-radius: 2px; font-size: 16px; font-family: "黑体"; color: #333;}
+
+.freetrip_select{ background: url(../images/select_beijing.fw.png) no-repeat bottom right; border: 1px solid #E3393C !important;}
+
+.selectCondition_r{ float: left; width: 1020px !important;}
+
+
+.freetrip_select_nav{ border-bottom: 2px solid #E33441; height: 41px;}
+.freetrip_select_nav ul{ float: left;}
+.freetrip_select_nav ul li{ float: left; margin:2px 10px 0 0;}
+.freetrip_select_nav ul li a{ display: block; border: 1px solid #F2F2F2; border-bottom: none; padding: 10px 40px; border-radius: 3px 3px 0 0; font-size: 16px; font-family: "黑体";}
+.freetrip_select_nav ul li a:hover{ display: block; border: 1px solid #E33441; border-bottom: none; color: #E33441;background-color: #FFFFFF;}
+.freetrip_select_nav_a_select{ display: block; border: 1px solid #E33441 !important; border-bottom: none; color: #E33441;background-color: #FFFFFF;}
+
+
+.planeTicket{ width: 1030px; float: left;}
+.planeTicket_top{ text-align: center; width: 1030px; height: 40px; background: #FFFFFF; border-radius: 3px 3px 0 0;border-bottom: 1px #e4e4e4 solid;}
+.planeTicket_top li{ float: left;}
+.planeTicket_top li:nth-child(1){ width: 170px;}
+.planeTicket_top li:nth-child(2){ width: 160px;}
+.planeTicket_top li:nth-child(3){ width: 160px;}
+.planeTicket_top li:nth-child(4){ width: 170px;}
+.planeTicket_top li:nth-child(5){ width: 286px;}
+.planeTicket_top li a{ font-size: 16px;font-family: "黑体"; color: #666666; line-height: 40px;}
+
+.planeTicket_list{ width: 1030px; background: #fff; min-height: 417px; }
+.planeTicket_info{border-bottom: 1px solid #eee; border: 1px solid #dedede; border-top: 1px solid #fff; border-radius: 0 0 2px 2px; width: 1028px;}
+.planeTicket_info_show{}
+.planeTicket_info_show>div{ float: left;}
+.planeTicket_info_a{ width: 170px;}
+.planeTicket_info_a_a{ margin-top: 20px;}
+.planeTicket_info_a_a_l{ float: left; border: 1px solid #428eff; padding: 12px 2px; border-radius: 3px; width: 20px; margin: 10px;}
+.planeTicket_info_a_a_r{ margin: 10px 0; float: left; line-height: 28px;}
+.planeTicket_info_a_a_r h4{ font-size: 16px; font-family: "黑体"; color: #428eff; font-weight: bold;}
+.planeTicket_info_a_a_r span{ font-size: 14px; font-family: "黑体";}
+.planeTicket_info_b{ width: 160px;}
+.planeTicket_info_b_a{ margin-top: 25px; line-height: 20px;}
+.planeTicket_info_b_b{ margin-top: 15px; line-height: 20px;}
+.planeTicket_info_b_a_a{ font-size: 14px; margin-top: 5px; color: #808080; font-weight: bold; line-height: 20px;}
+.planeTicket_info_b_a_b{ font-size: 16px; font-family: "黑体"; color: #428eff; line-height: 20px; font-weight: bold;}
+.planeTicket_info_b_a_c{ font-size: 14px; font-family: "黑体"; color: #808080; line-height: 20px;}
+
+.planeTicket_info_c{ width: 160px;}
+.planeTicket_info_c_a{ background: url(../images/flight_time_underline.png) no-repeat center 27px; line-height: 40px; margin-top: 24px;}
+
+.planeTicket_info_d{ width: 170px;}
+.planeTicket_info_e{  width: 130px;line-height: 23px; margin-top: 50px;}
+.planeTicket_info_e_a{ font-size: 14px; font-family: "黑体"; color:#666666; font-weight: bold;}
+
+.planeTicket_info_e_a span{ font-size: 14px; font-family: "黑体"; color:#666666; font-weight: bold;}
+.planeTicket_info_e_b{ font-size: 15px; font-family: "黑体"; color:#666666;}
+.planeTicket_info_e_c{ color: #808080; font-family: "黑体";}
+.planeTicket_info_f{ margin-top:50px ;}
+.planeTicket_info_f img{}
+
+.planeTicket_info_hide{ background: #f2faff; display: none;}
+.planeTicket_info_hide_top{ text-align: center; height: 50px; line-height: 50px; border-top: 1px solid #4090FF; border-bottom: 1px dashed #4090FF;}
+.planeTicket_info_hide_top li{ float: left; width: 200px; font-size: 16px; font-family: "黑体"; font-weight: bold;}
+
+.planeTicket_info_hide_list{ border-bottom: 1px solid #eee;}
+.planeTicket_info_hide_list>div{ float: left; width: 200px; text-align: center;}
+.planeTicket_info_hide_list_a{ line-height: 20px;}
+.planeTicket_info_hide_list_a_a{ font-family: " 微软雅黑"; font-size: 16px; font-weight: bold; margin-top: 10px; color: #4290FF;}
+
+.planeTicket_info_hide_list_b{ font-family: " 微软雅黑"; font-size: 18px; font-weight: bold; margin-top: 25px; color: #f00;}
+.planeTicket_info_hide_list_c{ margin-top: 25px;}
+.planeTicket_info_hide_list_c select{ border: none; color: #808080; outline: none; font-family: " 微软雅黑"; font-size: 14px; font-weight: bold;}
+.planeTicket_info_hide_list_c option{ border: none; color: #808080; outline: none; font-family: " 微软雅黑"; font-size: 14px; font-weight: bold;}
+.planeTicket_info_hide_list_d{ line-height: 20px; margin-top: 20px;}
+.planeTicket_info_hide_list_d i{ font-family: " 微软雅黑"; font-size: 16px; color: #f00; font-weight: bold;}
+.planeTicket_info_hide_list_d span{ font-family: " 微软雅黑"; font-size: 16px; color: #f00; font-weight: bold;}
+.planeTicket_info_hide_list_e{ float: right !important; width: 140px !important;}
+.planeTicket_info_hide_list_e a{ display: block; width: 80px !important; padding: 7px 0px; margin: 5px 20px; border: 1px solid #4290FF; border-radius: 3px; }
+.planeTicket_info_hide_list_e a:hover{ background: #4290FF; color: #fff;}
+
+
+
+
+
+
+
+/*二次修改 --begin 尉希轩--*/
+
+.planeTicket_info_c_b{ margin-top: 18px; background: url(../images/flight_time_underline.png) no-repeat center 27px; line-height: 40px;}
+.planeTicket_info_g{ float: left; width: 78px;}
+.planeTicket_info_g a{ line-height: 174px; font-family: "黑体"; font-size: 14px; color: #666666; font-weight: bold;}
+.planeTicket_info_e_b>span{ color: #f00; font-size: 18px;}
+.planeTicket_info_f_a { width: 95px;  margin: 14px 25px;}
+.planeTicket_info_f_a a{ width: 68px; color: #428dff;font-family: "黑体"; font-size: 16px; line-height: 30px; display: block; padding: 3px 11px; border:1px #428efe solid; border-radius: 5px; background: #FFFFFF;}
+.planeTicket_info_f_a a:hover{ color: #fff; background:#428dff; font-family: "黑体"; font-size: 16px; line-height: 30px;}
+.planeTicket_info_f_b a{ color: #428dff; font-size: 12px;}
+.planeTicket_info_f_b a:hover{ color: #428dff; font-size: 12px;text-decoration: underline;}
+
+/*.freetrip_select_nav ul li>input{ float: left; margin: 1px 5px 0 28px; cursor: pointer;}*/
+/*.freetrip_select_nav ul:nth-child(2){ padding: 22px 0 4px 230px;}*/
+/*.freetrip_select_nav ul>li>label{ cursor: pointer;}*/
+.freetrip_select_nav_right{ float: right; margin-right: 260px; margin-top: 18px;}
+.freetrip_select_nav_right li{ padding-left: 15px;}
+.freetrip_select_nav_right input{ float: left; margin: 0 5px;}
+.freetrip_select_nav_right label{ cursor: pointer;}
+
+
+.plane_ticket_screen_a{}
+.plane_ticket_screen_b{}
+
+/*二次修改 --end 尉希轩--*/
+
+/*修改*/
+.teamTrip_nav_search form{ width:200px; border: 1px #999999 solid;border-radius: 3px;}
+.teamTrip_nav_search>form>input{border: none; outline: none;}
+.teamTrip_nav_search_a{ color: #999999; background: #FFFFFF; border-right: 1px solid #999999 !important; line-height: 18px; margin: 2px 0; }
+.teamTrip_nav_search_b{ display: block; width: 20px; height: 18px; background: url(../images/search_small_03.png) no-repeat; float: right; margin: 4px 2px 0 0 ; }
+
+.supplier_none_b{ height: 100px; overflow-y: auto;}
+.planeTicket_list_chanpinming{ padding-top: 20px;}
+.planeTicket_list_chanpinming>div{ float: left;}
+.planeTicket_list_chanpinming_a{ margin-right: 40px; margin-left: 10px; font-size: 16px; font-family: "黑体";}
+.planeTicket_list_chanpinming_b{ margin-right: 12px; font-size: 16px; font-family: "黑体";}
+.planeTicket_list_chanpinming_c{ margin-right: 15px;font-family:"黑体"; line-height: 18px;}
+.planeTicket_list_chanpinming_d{ margin-right: 15px;font-family:"黑体"; line-height: 18px;}

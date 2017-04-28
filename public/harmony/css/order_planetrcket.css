@@ -1,0 +1,18 @@
+/*订票——机票*/
+.order_pt_aa span:nth-child(1){ font-size: 16px; color: #4391ff; font-family:"黑体";}
+.order_pt_aa span:nth-child(2){ font-size: 12px;}
+
+.order_pt_a{ margin-top: 16px;}
+.order_pt_a_a>span{ margin-left: 10px;line-height: 23px;}
+.order_pt_a>div{ float: left; margin-right: 46px;line-height: 23px;}
+.order_pt_a_c{}
+.order_pt_a_c_span{ float: left; color: #418ffe; margin-right: 28px; cursor: pointer; display: block; height: 23px; line-height: 23px; }
+.order_pt_a_c>div{ float: left; margin-right: 30px; color:#418ffe;position: relative;}
+.order_pt_a_c>div:hover .oidl_aba_c_hover{  display: block;}
+
+/*定票——签证*/
+.order_tl_a{ color:#418ffe;}
+.order_tl_a>span{ color:#418ffe;}
+
+.order_tl_b>span:nth-child(1){ margin-right: 30px;}
+.order_tl_b>span:nth-child(1){ }

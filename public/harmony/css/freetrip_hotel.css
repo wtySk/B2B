@@ -1,0 +1,132 @@
+.free_hotel{ width: 1030px; float: left;}
+.free_hotel_top{ text-align: center; width: 1030px; height: 40px; background: #FFFFFF; border-radius: 3px 3px 0 0;border-bottom: 2px #e4e4e4 solid;}
+.free_hotel_top li{ float: left; font-size: 16px; font-family: "黑体"; color: #666666; line-height: 40px;}
+.free_hotel_top li a{ float: left; font-size: 16px; font-family: "黑体"; color: #666666; line-height: 40px;}
+.free_hotel_top li a:hover{ font-weight: bold;}
+.free_hotel_top_select a{ font-weight: bold;}
+
+.free_hotel_top li a{ padding: 0 28px; width: 36px;}
+
+.free_hotel_main{ background: #fff; border-radius: 0 0 3px 3px; padding-bottom: 15px; width: 1030px; min-height: 300px;}
+.free_hotel_main_list{ width: 1030px;}
+
+.free_hotel_main_list_about{ padding: 10px 0; width: 1030px;}
+.free_hotel_main_list_about_l{ float: left; width: 220px; margin: 0px auto;}
+.free_hotel_main_list_about_l a{}
+.free_hotel_main_list_about_l img{ border:none; border-radius: 3px; width: 180px; height: 120px;}
+.free_hotel_main_list_about_r{ float: left; text-align: left; line-height: 25px;}
+
+.free_hotel_main_list_about_r_a{ font-size: 12px; font-family: "新宋体";}
+.free_hotel_main_list_about_r_b{}
+.free_hotel_main_list_about_r_b_bt{ font-size: 18px; font-family: "黑体"; color: #438EFF; float: left;}
+.free_hotel_main_list_about_r_b_bt a{ font-size: 18px; font-family: "黑体"; color: #438EFF; float: left;}
+.free_hotel_main_list_about_r_b_bt a:hover{  text-decoration: underline; font-size: 18px; font-family: "黑体"; color: #438EFF; float: left;}
+.free_hotel_main_list_about_r_b_star_prom{ font-size: 14px; font-family: "新宋体"; color: #666; float: left; margin-left: 25px;}
+.free_hotel_main_list_about_r_b_star{ float: left; position: relative; margin-left: 5px; margin-top: 3px;}
+.free_hotel_main_list_about_r_b_star_a{ width: 81px; display: inline-block; padding: 1px;}
+.free_hotel_main_list_about_r_b_star_b{ display: inline-block; position: absolute; left: 0; top: 0; overflow: hidden; height: 17px; z-index: 666;}
+
+.free_hotel_main_list_about_r_c{ font-size: 14px; font-family: "黑体"; color: #438EFF;}
+.free_hotel_main_list_about_r_c a{ font-size: 14px; font-family: "黑体"; color: #438EFF;}
+.free_hotel_main_list_about_r_c a:hover{ text-decoration: underline; font-size: 14px; font-family: "黑体"; color: #438EFF;}
+.free_hotel_main_list_about_r_d{}
+.free_hotel_main_list_about_r_d_a{ float: left;}
+.free_hotel_main_list_about_r_d_a span{ display: block;}
+.free_hotel_main_list_about_r_d_b{ float: left; margin-left: 15px;}
+.free_hotel_main_list_about_r_d_b img{ display: block; float: left; margin-top: 10px;}
+.free_hotel_main_list_about_r_d_b span{ display: block; float: left; margin-top: 9px; margin-left: 5px;}
+
+
+.free_hotel_nav{ margin: 0 20px; height: 35px; background: #F8F8F8; width: 990px;}
+.free_hotel_nav>li{ float: left; text-align: center; line-height: 35px; font-family: "黑体"; font-size: 14px; color: #808080;}
+.free_hotel_nav li:nth-child(1){ width: 160px;}
+.free_hotel_nav li:nth-child(2){ width: 100px;}
+.free_hotel_nav li:nth-child(3){ width: 110px;}
+.free_hotel_nav li:nth-child(4){ width: 100px;}
+.free_hotel_nav li:nth-child(5){ width: 100px;}
+.free_hotel_nav li:nth-child(6){ width: 100px;}
+.free_hotel_nav li:nth-child(7){ width: 120px;}
+.free_hotel_nav li:nth-child(8){ width: 100px;}
+
+.free_hotel_room{ margin: 0 20px; border-bottom: 1px solid #eee; }
+.free_hotel_room>div{ float: left; font-family: "黑体"; color: #666; font-size: 14px; text-align: center; }
+.free_hotel_room_a{ font-size: 16px; width: 160px; position: relative;line-height: 82px;}
+.free_hotel_room_a a{ font-size: 16px; width: 160px; display: block; color: #418EFF;line-height: 82px;}
+.free_hotel_room_a a:hover{ text-decoration: underline; line-height: 82px;}
+.free_hotel_room_b{ width: 100px; position: relative; line-height: 82px;}
+.free_hotel_room_c{ width: 110px; line-height: 82px;}
+.free_hotel_room_d{ width: 100px; line-height: 82px;}
+.free_hotel_room_e{ width: 100px; line-height: 82px;}
+.free_hotel_room_f{ width: 100px; color: #f00 !important; font-weight: bold; position: relative; line-height: 28px;}
+.free_hotel_room_f>span{ color: #f00; font-weight: bold; font-family: "黑体"; font-size: 14px; line-height: 82px;}
+.free_hotel_room_g{ width: 100px; font-weight: bold; margin-left: 8px; position: relative; line-height: 82px;}
+.free_hotel_room_g>span{ font-weight: bold; font-family: "黑体"; font-size: 14px; line-height: 82px;}
+.free_hotel_room_h{ width: 100px; line-height: 82px;}
+.free_hotel_room_i{ width: 100px; line-height: 82px;}
+.free_hotel_room_i a{ display: block; color: #418EFF; line-height: 25px; width: 90px; font-family: "黑体"; font-size: 14px;}
+.free_hotel_room_i a:nth-child(1){ border: 1px solid #418EFF; border-radius: 3px; padding: 4px 0px; margin-top: 13px;}
+.free_hotel_room_i a:nth-child(1):hover{ border: 1px solid #418EFF; background: #418EFF; color: #fff; border-radius: 3px; padding: 4px 0px; margin-top: 13px;}
+.free_hotel_room_i a:nth-child(2){ margin-top: 5px;}
+.free_hotel_room_i a:nth-child(2):hover{ text-decoration: underline; margin-top: 5px;}
+
+.free_hotel_fixed{}
+.free_hotel_fixed_bg{ background: #000; opacity: 0.1; width: 100%; height: 100%; top: 0; left: 0; z-index: 66; position: fixed; display: none;}
+.free_hotel_fixed_main{ width: 500px; height: 300px; position: fixed; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background: #fff; z-index: 667;border-radius: 5px; border: 1px solid #eee; display: none;}
+
+.free_hotel_fixed_main_l{ width: 500px; position: relative;}
+.free_hotel_fixed_main_l>div{ float: left; width: 124px; border-right: 1px solid #eee; border-bottom: 1px solid #eee; height: 35px; line-height: 35px;}
+.free_hotel_fixed_main_l>div a{ width: 124px; display: block; font-family: "黑体"; font-size: 16px;}
+.free_hotel_fixed_main_l>div a:hover{ border-bottom: 1px solid #fff; color: #f00;}
+.free_hotel_fixed_main_l_select{ border-bottom: 1px solid #fff; color: #f00;}
+/*.free_hotel_fexed_main_l>div:last-child{ border-bottom:none;}*/
+
+/*.free_hotel_fexed_main_r{ width: 450px; height:264px; padding:0 25px; overflow: auto;}*/
+.free_hotel_fixed_main_l>div>div{ position: absolute; line-height: 25px; color: #666; width: 450px; left: 0px; top: 40px; text-align: left; height:260px; padding:0 25px; overflow: auto; font-family: "新宋体"; font-size: 12px;}
+
+.free_hotel_select_content{ display: none;}
+.free_hotel_select_content_sel{ display: block;}
+.free_hotel_select_content_img{ position: relative; overflow:hidden; width: 450px; height: 260px; overflow: hidden;}
+
+
+
+/*房型图片轮播*/
+.banList{ position:absolute; height:240px; width: 450px; z-index: 998; text-align: center; overflow: hidden; top: 10px;}
+.banList img{ width: 450px; height: 240px;}
+.banList li{ height:260px; opacity:0;position:absolute;transform:scale(0);transition:transform 0.5s ease 0s, opacity 1.5s ease 0s;z-index:1;}
+.banList li.active{ opacity:1;transform:scale(1);z-index:2;}
+.fomW{ clear: both; position:absolute; height:20px; width:100px; overflow: hidden; z-index: 9999; left:200px; bottom: 25px;}
+.jsNav{text-align:center;}
+.jsNav a{display:inline-block; background:#fff; float: left; width:15px !important; height:15px; border-radius:50%; margin:0 5px;}
+.jsNav a.current{ background:#fc8f0f; cursor:pointer}
+/*房型图片轮播*/
+
+.more_room_class{ text-align: right; margin:0px 30px;  border-bottom: 1px dashed #e9e9e9; line-height: 50px;}
+.more_room_class_a{ width: 80px; float: right;cursor: pointer;}
+.more_room_class span{ margin: 0 10px;}
+
+.hover_xiaojiantou{ background: #FFFFFF; border-radius: 3px; border: 1px #bbbbbb solid; max-width:235px ;width: 235px; position: absolute;top: 58px; left: 0; z-index:200; line-height: 29px; display: none;}
+.hover_xiaojiantou img{ position: absolute; top: -6px; left: 46px;}
+.free_hotel_room_b:hover .hover_xiaojiantou{ display: block;}
+
+
+.free_hotel_room_f img{ float: right; padding: 34px 0 30px 0;}
+.free_hotel_room_g img{ float: right; padding: 34px 0 30px 0;}
+
+.hover_xiaojiantou_b{ width: 235px; height: 165px; display: none; position: absolute; left: 0; top: 56px; z-index: 300;}
+.hover_xiaojiantou_b_neirong_a{ background: #FFFFFF; border-radius: 3px; border: 1px #bbbbbb solid; width:235px ;max-height: 155px; line-height: 29px; overflow: auto;}
+.xiaojianbiao{ position: absolute;top: -39px; left: 90px; margin-right:40px ; z-index: 300;}
+.hover_xiaojiantou_b_neirong_a li>span{ font-family:"黑体"; font-size: 12px; ; margin: 9px 5px; }
+.hover_xiaojiantou_b_neirong_a li{ border-bottom: 1px #f2f2f2 solid; height: 28px;}
+.hover_xiaojiantou_b_neirong_a li>span:first-child{ border-right: 1px #F2F2F2 solid;}
+.free_hotel_room_f:hover .hover_xiaojiantou_b{ display: block;}
+.free_hotel_room_g:hover .hover_xiaojiantou_b{ display: block;}
+
+.free_hotel_room_a:after{ content:""; display: block; width: 20px; height: 20px; background: url(../images/jiudian_yanjing_03.png) no-repeat; position: absolute; left: 126px; top: 37px;}
+
+
+.yincangbeijing{ width: 100%; height: 100%; background: #000000 ; opacity: 0.2; position: fixed; top: 0; left: 0;z-index: 100; display: none;}
+.ditu{ position: fixed; top: 0; left: 0;right:0; bottom: 0; margin: auto;  z-index: 1000; display: none; width: 1200px; height: 600px;}
+
+ .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+ .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+ .price_span{ font-size: 16px;}

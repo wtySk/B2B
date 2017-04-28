@@ -1,0 +1,11 @@
+
+.freetrip{ background: #fff; width: 1280px; margin: 0 auto; padding: 5px 0 0;}
+.freetrip>ul{ margin-left: 120px;}
+.freetrip>ul li{ float: left;}
+.freetrip>ul li a:hover{ background: url(../images/select_beijing.fw.png) no-repeat bottom right; border: 1px solid #E3393C;}
+
+
+.freetrip>ul li a{ display: block; border: 1px solid #fff; padding: 0 20px; height: 32px; overflow: hidden; margin: 5px 3px; line-height: 32px; border-radius: 2px; font-size: 16px; font-family: "黑体"; color: #333;}
+
+.freetrip_select{ background: url(../images/select_beijing.fw.png) no-repeat bottom right; border: 1px solid #E3393C !important;}
+

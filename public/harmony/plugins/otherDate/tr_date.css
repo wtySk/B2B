@@ -1,0 +1,288 @@
+
+.d_box {
+    width: 893px;
+    border: 2px solid #4cb7ef;
+}
+
+.dd_box {
+    /*height:30px;
+border:1px solid gray;*/
+}
+
+.bottom-txt {
+    width: 888px;
+    padding: 11px 0 6px 0;
+}
+
+.bottom-txt p {
+    float: left;
+    line-height: 36px;
+}
+
+.bottom-txt span {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+}
+
+.bottom-txt span b {
+    color: #ff5a26;
+}
+
+.bottom-txt span.left-span {
+    padding-left: 14px;
+}
+
+.bottom-txt span.right-span {
+    padding-left: 28px;
+}
+
+.a_1 {
+    float: left;
+    display: block;
+    width: 142px;
+    height: 36px;
+    background: url(http://st.wdxgo.com/images/final.images/book_4.png);
+    margin-left: 38px;
+}
+.a_1:hover {
+    background: url(http://st.wdxgo.com/images/final.images/book_5.png);
+    width: 142px;
+    height: 36px;
+    display: block;
+}
+
+.d_current {
+    color: #ff5883;
+    cursor: pointer;
+}
+
+.datebox {
+    margin-top: 10px;
+    /*margin-bottom: 5px;*/
+    width: 438px;
+    min-height: 361px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    /*top: 75px;*/
+    top:-12px;
+    left: 70px;
+    z-index: 100;
+}
+
+.datebox .nowDate, .datebox .nextDate {
+    min-height: 320px;
+    width: 432px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+.datebox .nowDate {
+    float: left;
+}
+
+.datebox .nextDate {
+    float: right;
+}
+
+.datebox .title {
+    position: relative;
+    height: 26px;
+    width: 432px;
+    background-color: #fafafa;
+}
+
+.datebox .title .pre, .datebox .title .next {
+    position: absolute;
+    top: 8px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.datebox .title .pre {
+    left: 5px;
+}
+
+.datebox .title .next {
+    right: 5px;
+}
+
+
+.datebox .title .pre img {
+    /*width: 55px;
+    height: 32px;*/
+    position: absolute;
+    /*top: -8px;*/
+    left: 8px;
+}
+
+.datebox .title .next img {
+    /*width: 55px;
+    height: 32px;*/
+    position: absolute;
+    /*top: -8px;*/
+    right: 8px;
+}
+.datebox .title .close   {
+    /*width: 55px;
+    height: 32px;*/
+    position: absolute;
+    /*top: -8px;*/
+    right: 9px;
+    top: 7px;
+
+}
+.datebox .title .nowMonthTitle, .datebox .title .nextMonthTitle {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 3px;
+    z-index: 0;
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.datebox .nowTable, .datebox .nextTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.datebox .nowTable th, .datebox .nextTable th {
+    text-align: center;
+    border: 2px solid white;
+    width: 55px;
+    height: 18px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.datebox .nowTable td, .datebox .nextTable td {
+    text-align: center;
+    border: 2px solid white;
+    width: 55px;
+    height: 50px;
+    font-size: 14px;
+    background-color: rgb(239,239,239);
+    float:none;
+    /*display:block;*/
+}
+
+.datebox .nowTable th, .datebox .nextTable th {
+    color: #fff;
+    font-weight: 200;
+    background-color: rgb(204,204,204);
+}
+
+.datebox .nowTable th.red, .datebox .nextTable th.red {
+    /*color: #F00;*/
+    background-color: #999999;
+}
+
+.datebox .nowTable td.red, .datebox .nextTable td.red {
+    color: #FF0000;
+    cursor: pointer;
+}
+
+.datebox .nowTable td.blue, .datebox .nextTable td.blue {
+    color: #0033CC;
+    cursor: pointer;
+}
+
+.datebox em {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.datebox .nowTable td.d_current:hover, .datebox .nextTable td.d_current:hover {
+    background-color: rgb(204,204,204);
+}
+
+.datebox .nowTable td:hover, .datebox .nextTable td:hover {
+    background-color: rgb(204,204,204);
+}
+
+.od_div {
+    width: 300px;
+    position: absolute;
+    left: -100px;
+    z-index: 999;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    height: 130px;
+    overflow: hidden;
+    text-align: left;
+    color: black;
+}
+
+.divall {
+    width: 281px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.divone {
+    padding: 11px 0px 15px 19px;
+}
+
+.divtwo {
+    padding-left: 19px;
+    height: 26px;
+    line-height: 26px;
+}
+
+.divtwo span {
+    height: 26px;
+    line-height: 26px;
+    padding:0 5px;
+}
+
+.divtwo select {
+    width: 56px;
+    height: 26px;
+    vertical-align: middle;
+}
+
+.divthree input {
+    width: 167px;
+    height: 35px;
+    background: #fe8900;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    margin-top: 9px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 8px;
+}
+
+.book {
+    margin-top:0px;
+}
+.book select {
+    float: left;
+    width: 164px;
+    border: 1px solid #cccccc;
+    padding: 5px 2px;
+    margin-top: 3px;
+}
+
+.book select option {
+    text-align: center;
+}
+
+.book a.a_1 {
+    float: left;
+    display: block;
+    width: 142px;
+    height: 36px;
+    margin-left:18px;
+}
+p.b_time {
+    width:330px;
+    white-space:nowrap;
+    overflow:hidden;
+}

@@ -1,0 +1,84 @@
+/*右侧购物车，广告 begin*/
+/*.jp_right{ float:right; width:240px; margin:0 auto; position:relative; overflow:hidden;}*/
+/*.gwc_tb{ width:165px; margin:5px auto; cursor:pointer;}*/
+
+.gwcBorder{ width:239px; max-height:500px; overflow:hidden; border-radius:5px; z-index:2; float:right; margin:5px auto; position:relative; text-align: left;}
+.gwcBorder_fixed{ position: fixed; top: 30px; margin-left:1041px }
+.gwc{ border-radius:5px; width:256px; overflow:hidden; padding-bottom:10px; background: #fff; color:#808080; max-height:490px; overflow-y:scroll;}
+.gwcTop{ height:40px; line-height:40px; color:#428EFF; font-family:"微软雅黑"; background:#fff;  border-radius:5px 5px 0 0; width:237px; overflow:hidden; position: absolute; z-index: 99999; border: 1px solid #428EFF; }
+
+.gwcTopimg{ margin:10px; float:left;}
+.gwcTopbt{ font-size:16px; text-align:center; display:inline-block; color: #428EFF; text-align: center;}
+.gwcTopqk{ font-size:12px; float:right; padding-right:10px; color: #428EFF; cursor: pointer;}
+.gwcTop_zhanwei{ height: 40px;}
+
+.gwcMain{ margin:0px -2px 5px 5px; width:240px; clear:both; height: 455px !important;}
+.gwcMainJp{ border-bottom:1px dashed #A0C6FF; padding-bottom:10px;}
+.gwcMain_bt{ height:25px; line-height:25px; overflow:hidden; margin-top:5px; border-bottom:1px solid #CBCBCB;}
+.gwcMain_bt_a{ float:left; font-size:14px; font-family:"黑体"; color:#428EFF;}
+.gwcMain_bt_a span{ display: inline-block; font-weight: bold; border-radius: 12px; width: 20px; color: #fff; background: #428EFF; text-align: center; height: 20px; line-height: 20px; margin-left: 5px; font-family: "`黑体";}
+.gwcMain_bt_b{ float:right; cursor:pointer; margin-right: 10px;}
+
+.gwcjpxx{ clear:both; margin-top:5px;}
+.gwcjpxx_a{}
+.gwcjpxx_a ul{ margin-top:0px;}
+.gwcjpxx_a ul li{ width:223px; font-size:12px; font-family:"新宋体"; line-height:22px;}
+
+.gwcjpxx_a_a{}
+.gwcjpxx_a_a a{ color:#428EFF;}
+.gwcjpxx_a_b{ }
+.gwcjpxx_a_c{}
+.gwcjpxx_a_c a{ color:#428EFF !important;}
+.gwcjpxx_a_d{}
+
+.gwcjpxx_b{ font-family:"微软雅黑";}
+.gwc_gmsl{ float:left; width:185px; font-size:14px;}
+.gwcjpxx_b_a{ float:right; width:115px;}
+.gwcjpxx_b_a>i{ width: 15px; line-height: 14px; font-weight: bold; text-align: center; padding-top: 2px; display: inline-block;}
+.danjia{ color:#FF0000; font-weight:bold; float: left;}
+.danjia span{ color:#FF0000; font-weight:bold;}
+.jiajian{ height:16px; width:55px; float:right;}
+.jiajian input{ border:none; width:900px; padding-left:5px; color:#999;}
+.jiajian span{ display:block; float:left; width:15px; line-height: 12px; height: 14px; text-align:center; cursor:pointer;}
+.jiajian_a{ border:1px solid #428EFF; border-right: none; border-radius:2px 0 0 2px;}
+.jiajian_b{ border:1px solid #428EFF; width:15px; border-left:1px solid #428EFF; border-right:1px solid #428EFF;height:14px; line-height:12px; overflow:hidden;}
+.jiajian_c{ border:1px solid #428EFF; border-left: none; border-radius:0 2px 2px 0;}
+.gwcjpxx_c{ clear:both; font-size:12px; font-family:"黑体"; text-align:center; line-height:18px; float: right;}
+.gwcjpxx_c>div{ margin-right:15px; cursor:pointer; height:18px; width:40px; border-radius:2px; float:left; margin-top:5px;}
+.gwcjpxx_c_a{ border:1px solid #999; color:#999;}
+.gwcjpxx_c_b{ border:1px solid #999; color:#999;}
+
+/*.gwc_js{ font-size:12px; font-family:"新宋体"; text-align:right; position: absolute; top: 385px; z-index: 99999; background: #fff; height: 80px; width: 240px; left: 0;}*/
+/*.gwc_js>div{ margin:6px 10px;}*/
+/*.gwc_js_a{ color:#FF0000; font-weight:bold;}*/
+/*.gwc_js_a span{ color:#FF0000; font-weight:bold;}*/
+/*.gwc_js_b{  text-align:center;}*/
+/*.gwc_js_b a{ background:#428EFF; color:#FFFFFF; width:60px; height:30px; line-height:30px; border-radius:3px; display:block; float:right;}*/
+
+.jp_right_gg{}
+.jp_right_gg ul{ margin-bottom:30px;}
+.jp_right_gg ul li{ margin-top:10px;}
+.jp_right_gg ul li img{ border-radius:3px;}
+/*右侧购物车，广告end*/
+
+/*广告 全部删除时 弹出框提示  --begin--*/
+.delete_prompt{ display: none;}
+.delete_prompt_a{ background: #000; opacity: 0.15; position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 999;}
+.delete_prompt_b{ width: 425px; height: 205px; background: #fff; position: fixed; z-index: 9999; margin: auto; left: 0; right: 0; top: 0; bottom: 0; border-radius: 3px;}
+.delete_prompt_b_top{ height: 45px; text-align: right; background: #f8f8f8;}
+.delete_prompt_b_top img{ cursor: pointer;}
+.delete_prompt_b_main{}
+
+.delete_prompt_b_main_a{ width: 240px; margin: 10px auto 0;}
+.delete_prompt_b_main_a_a{ float: left;}
+.delete_prompt_b_main_a_b{ float: left; color: #FF7802; font-size: 16px; margin-top: 35px; padding-left: 15px; font-weight: bold;}
+
+.delete_prompt_b_main_b{}
+.delete_prompt_b_main_b{ width: 190px; margin: 25px auto 0;}
+.delete_prompt_b_main_b a{ border: 1px solid #eee; background: #fff; color: #666; padding: 6px 20px; border-radius: 3px;}
+.delete_prompt_b_main_b a:hover{ border: 1px solid #4F96FF; background: #4F96FF; color: #fff; border-radius: 3px;}
+/*.delete_prompt_b_main_b_select{ border: 1px solid #4F96FF !important; background: #4F96FF !important; color: #fff !important; border-radius: 3px;}*/
+.delete_prompt_b_main_b_a{ float: left; margin-right: 25px; margin-left: 36px;}
+.delete_prompt_b_main_b_b{ float: left;}
+
+/*广告 全部删除时 弹出框提示 --end--*/

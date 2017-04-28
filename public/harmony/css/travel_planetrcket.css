@@ -1,0 +1,42 @@
+.travel_group_header_right_a_a_left_wangdan{ margin-left: 6px; color: #999999; font-family: "黑体"; font-size: 12px;}
+.travel_group_header_right_b_a_b{ margin-bottom: 5px;}
+.travel_group_header_right_c ul li span{ color:#666666;}
+.travel_group_header_right_c_a_left_a_wai{ text-align: left ; margin-bottom: 10px;margin-top: 10px;}
+.tghr_a{ text-align: left ; font-family: "新宋体"; font-weight: bold; font-size: 12px;}
+.tghr_b{ margin-left: 6px; color: #999999; font-family: "黑体"; font-size: 12px;}
+.plane_trcket_header_right_d_a{ background: url(../images/beijingyuanu_05.png) repeat-x; text-align: left;}
+.plane_trcket_header_right_d_a>span{ line-height: 40px; margin-left: 16px;}
+.plane_trcket_header_right_d_a_a{ font-family: "新宋体";}
+.plane_trcket_header_right_d_a_b{ font-family: "新宋体"; color: #999999;}
+
+.plane_trcket_header_right_d_z{ max-height: 316px; overflow: auto;}
+
+.plane_trcket_header_right_d_b{ height: 132px;}
+.plane_trcket_header_right_d_b_a{ float: left;}
+.plane_trcket_header_right_d_b_b{ float: right;}
+.plane_trcket_header_right_d_b_a>img{margin:46px 0 46px 4px;}
+
+.case_one{}
+.case_tow{ margin-top: 42px; display: none ;}
+
+.pthr_d_b_b_a{ height: 60px; background: url(../images/pthr_d_b_b_a_img_10.png) no-repeat center 20px; margin-bottom: 6px;}
+.pthr_d_b_b_a_a{ height: 30px; width: 640px; overflow: hidden;}
+.pthr_d_b_b_a_a div:nth-child(1){ float: left; width: 120px; line-height:18px;}
+.pthr_d_b_b_a_a div:nth-child(2){ float: left; width: 130px; line-height:18px;}
+.pthr_d_b_b_a_a div:nth-child(3){ float: left; width: 130px; line-height:18px;}
+.pthr_d_b_b_a_a div:nth-child(4){ float: left; width: 130px; line-height:18px;}
+.pthr_d_b_b_a_a div:nth-child(5){ float: left; width: 130px; line-height:18px;}
+.pthr_d_b_b_a_b{ height: 30px; text-align: center;}
+.zhongjianbeijing{ height: 12px;width: 100%; background: url(../images/zhongjianbeijing_18.png) repeat-x;}
+
+
+
+
+
+
+
+
+
+.travel_group_header_right_b_pt ul{ padding-left: 4px;}
+.travel_group_header_right_b_pt ul li{ margin-right: 32px; float: left; line-height: 30px;}
+.travel_group_header_right_b_pt_b{ line-height: 26px; text-align: left; padding-left:4px;}
