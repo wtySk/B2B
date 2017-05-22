@@ -62,4 +62,11 @@ class ArticleImplement  extends Api implements ArticleInterface{
         $return = $this->articleApiService->addHit($params);
         return $return;
     }
+
+    function getByIdForPostman(Request $request,$id)
+    {
+        $params = $request->all();
+        $result = $this->articleApiService->getById($params);
+        return $result;
+    }
 }

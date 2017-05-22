@@ -14,3 +14,10 @@ Route::group([
     ]);
     $router->post('article/release', 'ArticleAdminController@release');
 });
+
+
+Route::group([
+    'namespace'     => modulesNamespace(__FILE__)
+],function(Router $router){
+    $router->get('{username}/articles','ArticleController@index');
+});

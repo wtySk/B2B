@@ -37,8 +37,15 @@ class IndexRepository extends Repository {
         $params = [];
         $url = 'miter/area/list/search';
        // $url = 'petal/search/area';
-
         $response = apiPost($params,$url);
+
+        $result = [];
+
+       for ($i=0;$i<9;$i++){
+           $result[] = $response->root[$i];
+       }
+       $response->root = $result;
+
         return $response;
     }
 

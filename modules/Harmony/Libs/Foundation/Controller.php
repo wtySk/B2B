@@ -12,6 +12,7 @@ use Modules\Core\Libs\Foundation\BaseController;
  * Libs Controller
  * @package Modules\Harmony\Libs\Foundation
  */
-class Controller extends BaseController{
+class Controller extends BaseController
+{
 
 }

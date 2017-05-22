@@ -36,13 +36,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-            $_param['type'] = '';
-            $url = 'petal/search/area';
-            $result = apiPost($_param,$url);
-            return json_encode($result);
-            dd($result);
-        //$arr = $this->indexService->index();
-      //  return _view('Harmony.Index.index',$arr);
+        $arr = $this->indexService->index();
+        return _view('Harmony.Index.index',$arr);
     }
 
     /**

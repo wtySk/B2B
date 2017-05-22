@@ -40,7 +40,7 @@ class OrderController extends Controller
         $params = $temp['msg'];
         $url = 'miter/order/quick';
         $response = apiPost($params,$url);
-
+        dd($params);
         if($response->success) {
             return ['result' => 'true', 'url' => '/success'];
         }else{

@@ -36,22 +36,30 @@ class IndexService {
     {
         $response = $this->indexRepository->getContent();
         $area = $response->root;
-
         //将前三个目的地城市提取出来，并赋值到 $areaList中
         $areaLength = count($area);
         $areaList=[];
+
         for($i=0;$i<$areaLength;$i++) {
             $areaList[$i] = $response->root[$i]->listSecond;
         }
+
         $threeMsg = [];
         for($n=0;$n<$areaLength;$n++) {
-            for($z=0;$z<3;$z++){
-                $threeMsg[$z] = $areaList[$n][$z];
+            if(count($areaList[$n])>=3){
+                for($z=0;$z<3;$z++){
+                    $threeMsg[$z] = $areaList[$n][$z];
+                }
+            }else{
+                for($z=0;$z<count($areaList[$n]);$z++){
+                    $threeMsg[$z] = $areaList[$n][$z];
+                }
             }
+
             $area[$n]->msgName = $threeMsg;
         }
+    //    dd($area,$areaLength,$areaList,$threeMsg,$area);
         $area = json_encode($area);
-
         //获取供应商
         $params = [];
         $url = 'miter/regiment/brand/list/search';
@@ -68,25 +76,28 @@ class IndexService {
         $response = apiPost($params,$url);
         $brandPro = $response->root;
         //查询尾单
+
         $_params = [
             'pageNum' => 1
         ];
         $url = 'miter/regiment/bargain/search';
         $_response = apiPost($_params, $url);
-        if ($_response->success || $_response->root != '') {
-            $bargainList = $_response->root->list;
-            foreach ($_response->root->list as $k => $v) {
-                $v->directPrice = $v->directPrice/100;
-                $v->tradePrice = $v->tradePrice/100;
-                if ($v->logo == '') {
-                    $v->logo = '/harmony/images/index_end.png';
-                }
-            }
-            $bargainSize = $_response->root->pageSize;
-        }else{
-            $bargainList = '{}';
-            $bargainSize = 1;
-        }
+
+
+//        if ($_response->success || $_response->root != '') {
+//            $bargainList = $_response->root->list;
+//            foreach ($_response->root->list as $k => $v) {
+//                $v->directPrice = $v->directPrice/100;
+//                $v->tradePrice = $v->tradePrice/100;
+//                if ($v->logo == '') {
+//                    $v->logo = '/harmony/images/index_end.png';
+//                }
+//            }
+//            $bargainSize = $_response->root->pageSize;
+//        }else{
+//            $bargainList = '{}';
+//            $bargainSize = 1;
+//        }
 
         foreach ($brandPro as $item) {
             $item->tradePrice = $item->tradePrice / 100;
@@ -104,8 +115,10 @@ class IndexService {
         $secondName = json_encode($secondName);
         $thirdName = json_encode($thirdName);
         $brandPro = json_encode($brandPro);
-        $bargainSize = json_encode($bargainSize);
-        $bargainList = json_encode($bargainList);
+//        $bargainSize = json_encode($bargainSize);
+//        $bargainList = json_encode($bargainList);
+        $bargainSize = json_encode([]);
+        $bargainList = json_encode([]);
 
         $result = compact('area','brandName','firstName','secondName','thirdName','brandPro','bargainList','bargainSize');
 

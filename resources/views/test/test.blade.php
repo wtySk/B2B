@@ -10,6 +10,7 @@
     {{ csrf_field() }}
     <input type="file" name="file">
     <button type="submit">提交</button>
+    <a href="/test/about">About Us</a>
 </form>
 </body>
 </html>

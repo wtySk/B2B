@@ -16,6 +16,7 @@ $api->version('v1', function ($api) {
         //get方式只做测试用 post为接口实现方式
         $api->post('articles','ArticleImplement@getAll');
         $api->post('article','ArticleImplement@getById');
+        $api->get('article/{id}','ArticleImplement@getByIdForPostman');
         $api->post('article-hit','ArticleImplement@addHit');
     });
 });

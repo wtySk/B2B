@@ -27,7 +27,7 @@ if (! function_exists('_view')) {
         }
         //设置3个变量 模块名称 视图下文件夹名称 视图文件名称
         list($project, $moduleName, $viewName) = explode('.', $view);
-        return view()->file(base_path('Modules\\' . $project . '\\' . $moduleName . '\\Views\\' . $viewName . '.blade.php'), $data, $mergeData);
+        return view()->file(base_path('Modules/' . $project . '/' . $moduleName . '/Views/' . $viewName . '.blade.php'), $data, $mergeData);
     }
 }
 

@@ -12,6 +12,7 @@
 */
 
 const DOMAIN = 'http://59.110.52.13/';
+//const DOMAIN = 'http://192.168.0.172/';
 const NABIANET = 'http://wechat.nabianet.com/';
 const JAVAPROVIDER = true;
 
@@ -28,7 +29,10 @@ Route::get('/home', 'HomeController@index');
 
 /*test*/
 
-
+Route::get('/test','TestController@index');
+Route::get('/test/about','TestController@about');
+Route::get('/test/register','TestController@register');
+Route::post('/test/register','TestController@registerPost');
 Route::get('/test/file','TestController@index');
 Route::post('/test/file-post','TestController@post');
 Route::get('/cache','TestController@ca');

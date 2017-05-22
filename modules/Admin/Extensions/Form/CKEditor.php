@@ -15,7 +15,6 @@ class CKEditor extends Field
 
     public function render()
     {
-        dd("eqeqeqeqeqeqeq");
         $this->script = "CKEDITOR.replace( '{$this->getElementClass()[0]}' );";
       //  $this->script = "$('textarea.{$this->getElementClass()}').ckeditor();";
 

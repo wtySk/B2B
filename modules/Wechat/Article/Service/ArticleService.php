@@ -15,7 +15,7 @@ use Modules\Wechat\Libs\Foundation\Service;
  * Class ArticleApiService
  * @package Modules\Wechat\Article\Service
  */
-class ArticleApiService extends Service
+class ArticleService extends Service
 {
     protected $articleRepository;
 
@@ -28,13 +28,13 @@ class ArticleApiService extends Service
      * @param $params
      * @return \Dingo\Api\Http\Response
      */
-    public function getAll($params)
+    public function getAll($params =[])
     {
 
         /*
        * 传入参数
        *
-       *          ['keyword' = '游世界']
+       *          ['keyword' => '游世界']
        *
        * 返回结果
        *

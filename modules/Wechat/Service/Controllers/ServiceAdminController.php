@@ -4,12 +4,14 @@
  * Date: 2017/2/28 14:11
  */
 
-namespace Modules\Wechat\Article\Controllers;
+namespace Modules\Wechat\Service\Controllers;
+
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Widgets\InfoBox;
 
 //引入自定义类
 use Modules\Wechat\Libs\Traits\Helper;
@@ -20,8 +22,9 @@ use Modules\Wechat\Article\Models\Article;
 use Modules\Wechat\Libs\Foundation\Controller;
 use Modules\Admin\Extensions\Tools\ReleaseProduct;
 
-class ArticleAdminController extends Controller
+class ServiceAdminController extends Controller
 {
+
     use Helper;
 
     use ModelForm;
@@ -67,6 +70,10 @@ class ArticleAdminController extends Controller
         return Admin::grid(Article::class, function (Grid $grid) {
             $grid->model()->orderBy('is_recommend', 'DESC');
             $grid->model()->orderBy('order_id','DESC');
+            if(!Admin::user()->isAdministrator()){
+                $grid->model()->where('author',Admin::user()->name);
+            };
+
 
             $grid->filter(function ($filter){
                 $filter->like('keyword', '标签');
@@ -79,7 +86,7 @@ class ArticleAdminController extends Controller
                 });
             });
 
-           /* $grid->id('id')->editable();*/
+            /* $grid->id('id')->editable();*/
             $grid->order_id('排序')->editable();
             $grid->title('标题')->editable('textarea');
             $grid->description('简介')->limit(20);
@@ -115,6 +122,7 @@ class ArticleAdminController extends Controller
             $form->tab('基本',function () use ($form,$id,$datetime){
                 $form->text('title','标题')->rules('required|min:2');
                 $form->text('description','简介');
+                $form->hidden('author','作者')->default(Admin::user()->name);
                 $form->image('image_local','缩略图')->name(function($file){
                     $imageName = md5($file->getSize().$file->getFileName()).'.'.$file->guessExtension();
                     return $imageName;
@@ -123,7 +131,7 @@ class ArticleAdminController extends Controller
                 $form->number('width','缩略图宽')->default(450)->help('默认为450');
                 $form->number('height','缩略图高')->default(300)->help('默认为300');
                 $form->ignore(['width', 'height']);
-              /*  $form->image('imageMultiple','组图')->multiple();*/
+                /*  $form->image('imageMultiple','组图')->multiple();*/
                 $option = ['游地方'=>'游地方','游路线'=>'游路线','游攻略'=>'游攻略','游精品'=>'游精品'];
                 $form->select('keyword','标签')->options($option);
                 $form->text('hits','点击次数')->default(0);
@@ -133,33 +141,53 @@ class ArticleAdminController extends Controller
                 $form->ckeditor('content','内容');
                 $form->datetime('published_at','发布时间')->default($datetime->format('Y-m-d H:i:s'));
                 /*  $form->datetime('deleted_at','删除时间');*/
-              /*  $form->datetime('created_at', '创建时间')->default($datetime->format('Y-m-d H:i:s'));*/
+                /*  $form->datetime('created_at', '创建时间')->default($datetime->format('Y-m-d H:i:s'));*/
                 $form->hidden('updated_at', '更新时间')->default($datetime->format('Y-m-d H:i:s'));
             });
-                $form->saving(function(Form $form){
-                    if($form->input('image_local') != null) {
-                        //存储到七牛云上
-                        $imageName = config('admin.upload.image') . md5($form->input('image_local')->getSize() . $form->input('image_local')->getFileName()) . '.' . $form->input('image_local')->guessExtension();
-                        // $disk = Storage::disk('qiniu');
-                        // $return = $disk->put($imageName,fopen($form->input('image')->getRealPath(), 'r'));
-                        // if ($return){
-                        //     $form->image_cloud = env('QINIU_DOMAIN').'/'.$imageName.'?imageMogr2/auto-orient/thumbnail/450x300>/blur/1x0/quality/75|imageslim';
-                        // }
-                        $getRealPath = $form->input('image_local')->getRealPath();
-                        $return = $this->uploadImage($imageName, $getRealPath);
-                        if ($return) {
-                            $form->image_cloud = $imageName;
-                        }
+            $form->saving(function(Form $form){
+                if($form->input('image_local') != null) {
+                    //存储到七牛云上
+                    $imageName = config('admin.upload.image') . md5($form->input('image_local')->getSize() . $form->input('image_local')->getFileName()) . '.' . $form->input('image_local')->guessExtension();
+                    // $disk = Storage::disk('qiniu');
+                    // $return = $disk->put($imageName,fopen($form->input('image')->getRealPath(), 'r'));
+                    // if ($return){
+                    //     $form->image_cloud = env('QINIU_DOMAIN').'/'.$imageName.'?imageMogr2/auto-orient/thumbnail/450x300>/blur/1x0/quality/75|imageslim';
+                    // }
+                    $getRealPath = $form->input('image_local')->getRealPath();
+                    $return = $this->uploadImage($imageName, $getRealPath);
+                    if ($return) {
+                        $form->image_cloud = $imageName;
                     }
-                });
-                  $form->saved(function(Form $form){
+                }
+            });
+            $form->saved(function(Form $form){
 //                      if($form->input('image_local') != null){
 //                          $width = request('width') <= 0 ? 450 : (int)request('width');
 //                          $height = request('height') <= 0 ? 300 : (int)request('height');
 //                          $imageName = config('admin.upload.image').md5($form->input('image_local')->getSize().$form->input('image_local')->getFileName()).'.'.$form->input('image_local')->guessExtension();
 //                          Image::make($imageName)->resize($width,$height)->save();
 //                      }
-                  });
+            });
         });
     }
+
+
+    public function basic()
+    {
+        //1.查看当前用户的详细资料
+        return Admin::content(function (Content $content) {
+
+            $content->header('服务商');
+            $content->description(Admin::user()->name);
+
+            $content->row(function ($row) {
+                $row->column(3, new InfoBox('New Users', 'users', 'aqua', '/admin/users', '1024'));
+                $row->column(3, new InfoBox('New Orders', 'shopping-cart', 'green', '/admin/orders', '150%'));
+                $row->column(3, new InfoBox('Articles', 'book', 'yellow', '/admin/articles', '2786'));
+                $row->column(3, new InfoBox('Documents', 'file', 'red', '/admin/files', '698726'));
+            });
+
+        });
+    }
+
 }
