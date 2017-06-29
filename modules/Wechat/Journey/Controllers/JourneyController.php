@@ -37,10 +37,11 @@ class JourneyController extends Controller
 
     public function create()
     {
-        return Admin::content(function (Content $content){
+        $id = $_GET['id'];
+        return Admin::content(function (Content $content) use ($id){
             $content->header(trans('行程'));
             $content->description(trans('admin::lang.create'));
-            $content->body($this->form()->render());
+            $content->body($this->form($id)->render());
         });
     }
 
@@ -59,23 +60,18 @@ class JourneyController extends Controller
 
     protected function grid()
     {
-
-
-
         return Admin::grid(Journey::class, function (Grid $grid) {
-
             $grid->column('product.title','产品');
             $grid->title('标题');
             $grid->description('描述');
-
-
         });
     }
-    protected function form()
+    protected function form($id ='')
     {
-        return Admin::form(Journey::class, function (Form $form)  {
+        return Admin::form(Journey::class, function (Form $form) use ($id) {
 
-            $form->tab('基础信息',function () use ($form){
+            $form->tab('基础信息',function () use ($form,$id){
+                $form->hidden('product_id')->value($id);
                 $form->text('title','标题');
                 $form->text('description','描述');
             });

@@ -56,7 +56,7 @@ class DepartureController extends Controller
     {
 
         return Admin::content(function (Content $content) use ($id) {
-            $content->header(trans('文章'));
+            $content->header(trans('团期'));
             $content->description(trans('admin::lang.edit'));
             $content->body($this->form()->edit($id));
         });

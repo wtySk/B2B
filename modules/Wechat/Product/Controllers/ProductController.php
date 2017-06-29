@@ -106,6 +106,8 @@ class ProductController extends Controller
                 $form->text('nights','晚数')->setWidth(2)->default(0);
                 $form->text('destination','目的地');
                 $form->textarea('content','内容')->setWidth(4);
+                $form->text('hotel_star','酒店星级');
+                $form->text('supplier','供应商');
                 $form->switch('is_published','是否发布');
                 $form->switch('is_recommend','是否推荐');
                 $form->datetime('created_at', 'Created At')->default(Carbon::now());
@@ -179,31 +181,36 @@ class ProductController extends Controller
             $form->tab('行程',function () use($form){
 
                 $form->hasMany('journey',function (Form\NestedForm $form){
-                    $form->text('title','行程标题');
-                    $form->text('description','描述信息');
+                    $form->text('title','行程标题')->readOnly();
+                    $form->text('description','描述信息')->readOnly();
                     $form->display('id','编辑方案')->with(function ($value) {
                         if($value !=''){
                             return '<input class="journey-edit  btn btn-primary btn-sm" type="button" src="/admin/journey/'.$value.'/edit" value="编辑"></input>';
                         }else{
                             return '';
-                        }
-
-});
+                        }});
                 })->mode('show');
 
+                $form->display('id','新增行程')->with(function ($id) {
+                    if($id !=''){
+                        return '<input class="journey-edit  btn btn-success" type="button" src="  /admin/journey/create?id='.$id.'" value="新增">';
+                    }else{
+                        return '';
+                    }});
             });
 
 
             $form->tab('其他信息',function () use($form){
 
                 $form->text('backup','备注');
+                $form->text('schedule','班期说明');
                 $form->text('qrcode','二维码')->help('请出入二维码的地址,前台页面自动生成相应的二维码');
 
             });
 
 
-            $form->saving(function () use ($form){
 
+            $form->saving(function () use ($form){
 
             });
 

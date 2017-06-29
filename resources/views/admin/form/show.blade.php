@@ -14,13 +14,11 @@
 
             <div class="has-many-{{$column}}-form fields-group">
 
-                <table>
                 @foreach($form->fields() as $field)
 
                     {!!   $field->render() !!}
 
                 @endforeach
-                </table>
                 <div class="form-group">
                     <label class="col-sm-{{$width['label']}} control-label"></label>
                     <div class="col-sm-{{$width['field']}}">
@@ -34,26 +32,6 @@
         @endforeach
     </div>
 
-    <template class="{{$column}}-tpl">
-        <div class="has-many-{{$column}}-form fields-group">
 
-            {!! $template !!}
-
-            <div class="form-group">
-                <label class="col-sm-{{$width['label']}} control-label"></label>
-                <div class="col-sm-{{$width['field']}}">
-                    <div class="remove btn btn-warning btn-sm pull-right"><i class="fa fa-trash"></i>&nbsp;{{ trans('admin::lang.remove') }}</div>
-                </div>
-            </div>
-            <hr>
-        </div>
-    </template>
-
-    <div class="form-group">
-        <label class="col-sm-{{$width['label']}} control-label"></label>
-        <div class="col-sm-{{$width['field']}}">
-            <div class="add btn btn-success btn-sm"><i class="fa fa-save"></i>&nbsp;{{ trans('admin::lang.new') }}</div>
-        </div>
-    </div>
 
 </div>
