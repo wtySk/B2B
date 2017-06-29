@@ -68,17 +68,23 @@ class ServiceAdminController extends Controller
     {
 
         return Admin::grid(Article::class, function (Grid $grid) {
-            $grid->model()->orderBy('is_recommend', 'DESC');
-            $grid->model()->orderBy('order_id','DESC');
+
+            //根据推荐、倒序做排序
+            $grid->model()->orderBy('is_recommend','DESC')->orderBy('order_id','DESC');
+            //如果是管理员级别 显示所有文章 否则显示当前用户录入的文章
             if(!Admin::user()->isAdministrator()){
-                $grid->model()->where('author',Admin::user()->name);
+                $grid->model()->where('author_id',Admin::user()->id);
             };
 
+            $grid->filter(function ($filter){
+                $filter->disableIdFilter();
+            });
 
             $grid->filter(function ($filter){
                 $filter->like('keyword', '标签');
             });
 
+            //批量操作
             $grid->tools(function ($tools) {
                 $tools->batch(function ($batch) {
                     $batch->add('发布文章', new ReleaseProduct(1));
@@ -86,11 +92,10 @@ class ServiceAdminController extends Controller
                 });
             });
 
-            /* $grid->id('id')->editable();*/
             $grid->order_id('排序')->editable();
             $grid->title('标题')->editable('textarea');
             $grid->description('简介')->limit(20);
-            $grid->author('作者');
+            $grid->column('articleAuthor.name','作者');
             $grid->keyword('标签');
             $grid->image_local('缩略图')->image('',100,100);
             $grid->hits('点击次数')->sortable();
@@ -122,7 +127,7 @@ class ServiceAdminController extends Controller
             $form->tab('基本',function () use ($form,$id,$datetime){
                 $form->text('title','标题')->rules('required|min:2');
                 $form->text('description','简介');
-                $form->hidden('author','作者')->default(Admin::user()->name);
+
                 $form->image('image_local','缩略图')->name(function($file){
                     $imageName = md5($file->getSize().$file->getFileName()).'.'.$file->guessExtension();
                     return $imageName;
@@ -140,9 +145,8 @@ class ServiceAdminController extends Controller
                 $form->switch('is_recommend','是否推荐');
                 $form->ckeditor('content','内容');
                 $form->datetime('published_at','发布时间')->default($datetime->format('Y-m-d H:i:s'));
-                /*  $form->datetime('deleted_at','删除时间');*/
-                /*  $form->datetime('created_at', '创建时间')->default($datetime->format('Y-m-d H:i:s'));*/
                 $form->hidden('updated_at', '更新时间')->default($datetime->format('Y-m-d H:i:s'));
+                $form->hidden('author_id','作者id')->default(Admin::user()->id);
             });
             $form->saving(function(Form $form){
                 if($form->input('image_local') != null) {

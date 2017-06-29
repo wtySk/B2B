@@ -18,6 +18,10 @@ const JAVAPROVIDER = true;
 
 /*首页*/
 Route::get('/', function () {
+
+
+
+
     return view('welcome');
 });
 /* 注册登录路由 */

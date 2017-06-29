@@ -8,6 +8,10 @@
 
 namespace Modules\Wechat\Product\Controllers;
 
+use Carbon\Carbon;
+use Encore\Admin\Widgets\Table;
+use Modules\Wechat\Departure\Models\Departure;
+use Modules\Wechat\Journey\Models\Journey;
 use Modules\Wechat\Product\Models\Product;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -31,7 +35,7 @@ class ProductController extends Controller
     {
 
         return Admin::content(function (Content $content) {
-            $content->header(trans('标签'));
+            $content->header(trans('跟团游'));
             $content->description(trans('admin::lang.list'));
             $content->body($this->grid()->render());
         });
@@ -40,7 +44,7 @@ class ProductController extends Controller
     public function create()
     {
         return Admin::content(function (Content $content){
-            $content->header(trans('标签'));
+            $content->header(trans('跟团游'));
             $content->description(trans('admin::lang.create'));
             $content->body($this->form()->render());
         });
@@ -49,156 +53,160 @@ class ProductController extends Controller
     public function edit(Request $request,$id)
     {
         return Admin::content(function (Content $content) use ($id,$request) {
-            $product = Product::all()->pluck('orderid')->toArray();
-            $content->header(trans('标签'));
+            $content->header(trans('跟团游'));
             $content->description(trans('admin::lang.edit'));
-            $content->body($this->form($product)->edit($id));
+            $content->body($this->form($id)->edit($id));
         });
     }
 
-    public function release(Request $request)
-    {
-        foreach (Product::find($request->get('ids')) as $product) {
-            $product->published = $request->get('action');
-            $product->save();
-        }
-    }
 
 
     protected function grid()
     {
         return Admin::grid(Product::class, function (Grid $grid) {
 
-//            取消删除和编辑功能
-                $grid->actions(function ($actions) {
-//                $actions->disableDelete();
-//                $actions->disableEdit();
-
-               // 当前行的数据数组
-//                $actions->row;
-//
-//                 获取当前行主键值
-//                $actions->getKey();
-//                    // append一个操作
-//                    $actions->append('<a href=""><i class="fa fa-eye"></i></a>');
-//
-//                    // prepend一个操作
-//                    $actions->prepend('<a href=""><i class="fa fa-paper-plane"></i></a>');
-
-                   // 添加自定义操作
-                    $actions->append(new OperationController($actions->getKey()));
-                });
-
-            //$grid->数据库字段名('列标题')->可排序列->可编辑列
-            //$form表单中有对应的列展示才能用editable()
-            //$grid->id('ID')->sortable()->editable();
-
-//            //拼凑多个列的内容
-//            $grid->column('full_name')->display(function () {
-//                return $this->title . ' ' . $this->type;
-//            });
-
-//            $grid->published_at()->editable('datetime');
-
-                //开关组
-//            $grid->column('switch_group')->switchGroup([
-//                'published'       => '热门',
-//                'new'       => '最新',
-//                'recommend' => '推荐',
-//            ], $states);
-
-            //添加自定义工具类
-//            $grid->tools(function ($tools) {
-//                $tools->append(new UserGender());
-//            });
-            //去除批量删除的按钮
-//            $grid->tools(function ($tools) {
-//                $tools->batch(function ($batch) {
-//                    $batch->disableDelete();
-//                });
-//            });
-
-
-
-            $grid->id('ID')->editable();
-            $grid->title('title')->ucfirst()->editable('textarea');
-            $grid->type('Type1')->badge('danger');
-
-         //   $grid->column('type')->color('#888');
-            $grid->options()->checkbox([
-                1 => 'Sed ut perspiciatis unde omni',
-                2 => 'voluptatem accusantium doloremque',
-                3 => 'dicta sunt explicabo',
-                4 => 'laudantium, totam rem aperiam',
-            ]);
-
-            $grid->filter(function ($filter){
-                $filter->like('title', 'title');
-
-                // sql: ... WHERE `user.email` = $email;
-                $filter->is('type', 'type~~~');
-            });
-     //       $grid->type()->popover('left');
-     //       $grid->picture()->image('http://lorempixel.com/100/100/?84251');
-
-     /*       $grid->column('img_url')->display(function ( $url ){
-                return '<img src="'.$url.'" style="max-width: 100px;">';
-            });*/
-
-            $grid->img_url()->image('',100,100);
-
-            $grid->tools(function ($tools) {
-                $tools->batch(function ($batch) {
-                    $batch->add('发布文章', new ReleaseProduct(1));
-                    $batch->add('文章下线', new ReleaseProduct(0));
-                });
-            });
-
+            $grid->image('logo')->image('',100,100);
+            $grid->title('title')->editable('textarea');
+            $grid->feature('产品特色')->map(function($feature){
+                return $feature;
+            })->implode('</br>');
+            $grid->departure('出发地')->map(function($departure){
+                return $departure;
+            })->implode('</br>');
+            $grid->departure_mode('出发方式');
+            $grid->backup('备注');
 
             $grid->created_at()->sortable();
             $grid->updated_at()->sortable();
+
+
+            $states = [
+                'on' => ['value' => 1,'text' => '是'],
+                'off' => ['value' => 0,'text' => '否'],
+            ];
+            $grid->is_recommend('推荐')->switch($states);
 
             $states = [
                 'on' => ['value' => 1,'text' => '通过'],
                 'off' => ['value' => 0,'text' => '未审'],
             ];
-            $grid->published('审核')->switch($states);
-            $grid->model()->orderBy('orderid', 'desc');
+            $grid->is_published('审核')->switch($states);
+           // $grid->model()->orderBy('order_id', 'desc');
 
         });
     }
-    protected function form()
+    protected function form($id =1)
     {
-        return Admin::form(Product::class, function (Form $form)  {
+        return Admin::form(Product::class, function (Form $form) use ($id) {
 
-            $form->display('id', 'ID');
-            $form->text('title');
-            $form->text('type');
-            $form->image('img_url');
-     //       $form->text('description');
-            $form->ckeditor('description');
-        //    dd( Product::find($form->ge));
-            $order = [
-                0=>1,
-                1=>2,
-                2=>3,
-                3=>4,
-                4=>5,
-                5=>6,
-            ];
-       /*     $order =  $obj->pluck('orderid')->toArray();*/
-            $form->select('orderid','排序')->options($order);
-            $form->checkbox('options')->options([
-                1 => 'Sed ut perspiciatis unde omni',
-                2 => 'voluptatem accusantium doloremque',
-                3 => 'dicta sunt explicabo',
-                4 => 'laudantium, totam rem aperiam',
-            ]);
-            $form->switch('published');
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
-            $form->saving(function () use ($form){
+            $form->tab('基本信息',function () use ($form){
+                $form->text('title','标题')->rules('required|min:3');
+                $form->image('image','logo')->rules('required');
+                $form->text('days','天数')->setWidth(2)->default(0);
+                $form->text('nights','晚数')->setWidth(2)->default(0);
+                $form->text('destination','目的地');
+                $form->textarea('content','内容')->setWidth(4);
+                $form->switch('is_published','是否发布');
+                $form->switch('is_recommend','是否推荐');
+                $form->datetime('created_at', 'Created At')->default(Carbon::now());
+                $form->datetime('updated_at', 'Updated At')->default(Carbon::now());
             });
+
+            $form->tab('特色',function () use ($form){
+
+                $form->embeds('feature','特色', function ($form) {
+                    $form->text('feature1','特色1');
+                    $form->text('feature2','特色2');
+                    $form->text('feature3','特色3');
+                    $form->text('feature4','特色4');
+                });
+
+            });
+
+            $form->tab('出发',function () use ($form){
+
+                $form->text('departure_mode','出发方式');
+
+                $form->embeds('departure','出发地', function ($form) {
+                    $form->text('departure1','出发地1');
+                    $form->text('departure2','出发地2');
+                    $form->text('departure3','出发地3');
+                    $form->text('departure4','出发地4');
+                });
+
+            });
+
+            $form->tab('升级策略',function () use ($form){
+
+                $form->embeds('strategy','升级策略', function ($form) {
+                    $form->text('strategy1','升级策略1');
+                    $form->text('strategy2','升级策略2');
+                    $form->text('strategy3','升级策略3');
+                    $form->text('strategy4','升级策略4');
+                });
+
+            });
+            $form->tab('标签',function () use ($form){
+
+                $form->embeds('labels','标签', function ($form) {
+                    $form->text('label1','标签1');
+                    $form->text('label2','标签2');
+                    $form->text('label3','标签3');
+                    $form->text('label4','标签4');
+                });
+
+            });
+
+            $form->tab('团期',function () use($form,$id){
+
+                $form->hasMany('departures',function (Form\NestedForm $form) use ($id){
+                    $form->datetime('published_at','出团时间');
+                    $form->text('price','价格')->default(0)->setWidth(3);
+
+                    $form->select('journey_id','行程方案')->options(function() use ($id) {
+                        $journey = Journey::where('product_id',$id)->get();
+                        $arr =[];
+                        foreach ($journey as $item){
+                            $arr[$item->id] = $item->title;
+                        }
+                        return $arr;
+                    });
+
+                });
+
+            });
+
+            $form->tab('行程',function () use($form){
+
+                $form->hasMany('journey',function (Form\NestedForm $form){
+                    $form->text('title','行程标题');
+                    $form->text('description','描述信息');
+                    $form->display('id','编辑方案')->with(function ($value) {
+                        if($value !=''){
+                            return '<input class="journey-edit  btn btn-primary btn-sm" type="button" src="/admin/journey/'.$value.'/edit" value="编辑"></input>';
+                        }else{
+                            return '';
+                        }
+
+});
+                })->mode('show');
+
+            });
+
+
+            $form->tab('其他信息',function () use($form){
+
+                $form->text('backup','备注');
+                $form->text('qrcode','二维码')->help('请出入二维码的地址,前台页面自动生成相应的二维码');
+
+            });
+
+
+            $form->saving(function () use ($form){
+
+
+            });
+
         });
     }
 

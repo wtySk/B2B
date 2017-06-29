@@ -33,7 +33,7 @@
         @endforeach
 
     </ul>
-    
+
     <div class="tab-content has-many-{{$column}}-forms">
 
         @foreach($forms as $pk => $form)

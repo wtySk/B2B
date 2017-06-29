@@ -12,6 +12,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Article extends Model
 {
     use SoftDeletes;
+
+    //显示文章的作者
+    public function articleAuthor()
+    {
+        return $this->hasOne('Modules\Admin\Models\Admin','id','author_id');
+    }
+
     protected $table = 'we_article';
     protected $dates = ['delete_at'];
     protected $fillable = [

@@ -1,0 +1,42 @@
+.main{ width: 960px; margin: 32px auto;}
+.header{ min-width: 1070px; height: 62px; border-bottom: 1px solid #d6dfea; background: #FFF;}
+.logo{ float: left; margin-left: 40px; margin-top: 8px;}
+.main_left{ float: left; width: 500px; height: 400px; position: relative; background: url("../images/backstage_b.png") no-repeat; background-size: contain; background-position: right bottom;}
+.main_left_b{ float: left; width: 500px; height: 400px; position: relative; background: rgba(255,255,255,0.65);}
+.main_left_b h1{ font-size: 16px; line-height: 80px; text-align: center;}
+.ercord{ margin-top: 20px;}
+.ercordimg{ width: 200px; height: 200px; margin: 0 auto;}
+.ercord img{ width: 200px; height: 200px;}
+.main_input{ background: rgba(255,255,255,0.85); float: right; min-height: 400px; width: 334px; overflow: hidden; border: 1px solid #999; border-radius: 6px; box-shadow: 5px 5px 36px rgba(0,0,0,0.25); position: relative;}
+.main_input h1{ text-align: center; font-size: 16px; background: #FFF; color: #333; line-height: 40px;}
+.main_input_i{ width: 330px; margin: 47px auto 0 auto;}
+.main_input_i form h2{ text-align: center; font-size: 14px; line-height: 60px;}
+.accout{ width: 284px; margin: 20px auto; position: relative;}
+.accout input{ width: 194px; height: 18px; border: none; border-radius: 3px; border: 1px solid #666; outline: none; padding: 10px 40px 10px 48px; background: none;}
+::-webkit-input-placeholder { /* WebKit browsers */ color:#999;}
+:-moz-placeholder { color:#999;}
+::-moz-placeholder { color:#999;}
+:-ms-input-placeholder{ color:#999;}
+.accout_b{ width: 284px; margin: 20px auto;}
+.accout_b input{ width: 100px; height: 18px; float: left; border: none; outline: none; border-radius: 3px; border: 1px solid #666; padding: 10px 40px 10px 10px; background: none;}
+.accout_b div{ float: right; width: 100px; height: 38px; background: #999;}
+.accout_button{ width: 282px; margin: 20px auto;}
+.accout_button button{ width: 282px; margin: 0 auto 20px auto; height: 40px; background: #fd7400; border: none; outline: none; border-radius: 3px; color: #fff; font-size: 18px; cursor: pointer;}
+.main_inputb{ position: absolute; bottom: 20px; right: 20px; color: #000;}
+.main_inputb a{ color: #000; font-size: 12px;}
+.accout>.icon{ width: 40px; height: 38px; position: absolute; left: 0; top: 0; border-radius: 3px 0 0 3px; border-top: 1px solid #666; border-bottom:1px solid #666; }
+.accout>.icon img{ width: 32px; height: 32px; margin: 4px 4px;}
+/*底部*/
+.footer{ width: 1280px; margin:0 auto; text-align: left; /*background: #5eb0fa;*/}
+.footer_top{ border-bottom: 1px solid #FFF; padding-bottom: 5px;}
+.footer_top_a{ float: left; margin:60px 15px 0 30px;}
+.footer_top_b{ float: left; margin: 36px 110px 0 0;}
+.footer_top_c{ float: left;}
+.footer_top_c h4{ color: #333; font-size: 14px; font-weight: bold; line-height: 32px;}
+.footer_top_c ul{ width: 110px;}
+.footer_top_c ul li{ line-height: 23px; width: 110px;}
+.footer_top_c ul li a{ color: #FFF;}
+.footer_bottom{ margin: 20px 0 20px 425px; height: 15px;}
+.footer_bottom li{ float: left; color: #FFF; line-height: 20px;}
+/*.content_black_bj{ position: absolute; width: 100%; height: 100%;}*/
+/*.content_black{ background: #000; opacity: 0.45; position: absolute; width: 100%; height: 100%; }*/

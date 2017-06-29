@@ -1,89 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{config('admin.title')}} | {{ trans('admin::lang.login') }}</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.5 -->
-  <link rel="stylesheet" href="{{ asset("/packages/admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset("/packages/admin/font-awesome/css/font-awesome.min.css") }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset("/packages/admin/AdminLTE/dist/css/AdminLTE.min.css") }}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{ asset("/packages/admin/AdminLTE/plugins/iCheck/square/blue.css") }}">
+    <meta charset="UTF-8">
+    <title>后台登陆页面</title>
+    <link rel="stylesheet" href="{{ asset('css/public.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="{{ Admin::url('/') }}"><b>{{config('admin.name')}}</b></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">{{ trans('admin::lang.login') }}</p>
-
-    <form action="{{ Admin::url('auth/login') }}" method="post">
-      <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
-
-        @if($errors->has('username'))
-          @foreach($errors->get('username') as $message)
-            <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label></br>
-          @endforeach
-        @endif
-
-        <input type="input" class="form-control" placeholder="{{ trans('admin::lang.username') }}" name="username" value="{{ old('username') }}">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
-
-        @if($errors->has('password'))
-          @foreach($errors->get('password') as $message)
-            <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label></br>
-          @endforeach
-        @endif
-
-        <input type="password" class="form-control" placeholder="{{ trans('admin::lang.password') }}" name="password" value="{{ old('username') }}">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-
-        <!-- /.col -->
-        <div class="col-xs-4 col-md-offset-4">
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin::lang.login') }}</button>
+<body>
+<div class="content">
+    <div class="content_black_bj"></div>
+    <div class="content_black"></div>
+    <div class="content_bj" id="content_bj">
+        <div class="header">
+            <div class="logo"><img src="/images/nabianet.png" alt="公司logo"></div>
         </div>
-        <!-- /.col -->
-      </div>
-    </form>
+        <div class="main clearboth" id="main">
+            <!--<div class="main_left" id="main_left" style="display: none"></div>-->
+            <div class="main_left_b" id="main_leftB">
+                <h1>北京那边网络科技有限公司： 数字生活，旅讯平台</h1>
+                <div class="ercord"><div class="ercordimg"><img src="/images/erweima.jpg" alt=""></div></div>
+            </div>
 
-  </div>
-  <!-- /.login-box-body -->
+            <form action="{{ Admin::url('auth/login') }}" method="post">
+
+            <div class="main_input">
+                <h1>后台登陆</h1>
+                <div class="main_input_i">
+                    <form action="">
+                        <div class="accout"><input type="text" name="username" placeholder="请输入账号" onFocus="focusInputa()"  value="{{ old('username') }}"><div class="icon"><img src="/images/accont.png" alt=""></div></div>
+                        <div class="accout"><input type="password" name="password" placeholder="请输入密码" onFocus="focusInputb()" value="{{ old('password') }}"><div class="icon"><img src="/images/password.png" alt=""></div></div>
+                        <!--<div><input type="checkbox"></div>-->
+                        {{--<div class="accout_b clearboth">--}}
+                            {{--<input type="text" placeholder="验证码">--}}
+                        {{--</div>--}}
+
+                        <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
+
+
+
+                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        </div>
+
+
+                        <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
+
+
+
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+
+                        @if($errors->has('username'))
+                            @foreach($errors->get('username') as $message)
+                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label></br>
+                            @endforeach
+                        @endif
+
+                        @if($errors->has('password'))
+                            @foreach($errors->get('password') as $message)
+                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label></br>
+                            @endforeach
+                        @endif
+                        <div class="accout_button"><button>登录</button></div>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </form>
+
+                    {{--<div class="main_inputb"><a href="###">忘记密码</a>&nbsp;|&nbsp;<a href="###">注册新账号</a>&nbsp;|&nbsp;<a href="###">意见反馈</a></div>--}}
+
+                </div>
+            </div>
+            </form>
+
+
+        </div>
+        <div class="footer" id="fotter">
+            <footer>
+                <ul class="footer_bottom ">
+                    <li>©2014-2015 nabianet.com 版权所有</li>
+                    <li> | </li>
+                    <li>京ICP备15037027</li>
+                    <li> | </li>
+                    <li>客服电话 400-060-8122</li>
+                </ul>
+            </footer>
+        </div>
+    </div>
 </div>
-<!-- /.login-box -->
-
-<!-- jQuery 2.1.4 -->
-<script src="{{ asset("/packages/admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js")}} "></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="{{ asset("/packages/admin/AdminLTE/bootstrap/js/bootstrap.min.js")}}"></script>
-<!-- iCheck -->
-<script src="{{ asset("/packages/admin/AdminLTE/plugins/iCheck/icheck.min.js")}}"></script>
 <script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });
+    var windowHeigh = document.documentElement.clientHeight
+    var Bj = document.getElementById('content_bj')
+    var mainCH = document.getElementById('main')
+    var fotterH = document.getElementById('fotter').offsetHeight
+    Bj.style.height = windowHeigh + 'px'
+    mainCH.style.height = windowHeigh - 150 - fotterH + 'px'
+    function focusInputa() {
+        var bgLeft = document.getElementById('main_left')
+        var bgLeftB = document.getElementById('main_leftB')
+        bgLeft.style.display = 'block'
+        bgLeftB.style.display = 'none'
+    }
+    function focusInputb() {
+        var bgLeft = document.getElementById('main_left')
+        var bgLeftB = document.getElementById('main_leftB')
+        bgLeft.style.display = 'none'
+        bgLeftB.style.display = 'block'
+    }
 </script>
 </body>
 </html>

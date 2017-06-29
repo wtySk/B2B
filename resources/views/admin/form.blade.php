@@ -16,16 +16,7 @@
             @else
                 <div class="fields-group">
                     @foreach($form->fields() as $field)
-                        @if( ! $field instanceof \Encore\Admin\Form\Field\HasMany)
-                            {!! $field->render() !!}
-                        @endif
-                    @endforeach
-                </div>
-                <div class="fields-group">
-                    @foreach($form->fields() as $field)
-                        @if( $field instanceof \Encore\Admin\Form\Field\HasMany)
-                            {!! $field->render() !!}
-                        @endif
+                        {!! $field->render() !!}
                     @endforeach
                 </div>
             @endif
@@ -33,7 +24,10 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            @if( ! $form->isMode(\Encore\Admin\Form\Builder::MODE_VIEW)  || ! $form->option('enableSubmit'))
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            @endif
             <div class="col-sm-{{$width['label']}}">
 
             </div>

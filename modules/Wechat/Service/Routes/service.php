@@ -7,7 +7,7 @@ use Illuminate\Routing\Router;
 Route::group([
     'prefix'        => config('admin.prefix'),
     'namespace'     => modulesNamespace(__FILE__),
-    'middleware'    => ['web', 'admin','admin.permission:allow,service'],
+    'middleware'    => ['web', 'admin','admin.permission:allow,store'],
 ], function (Router $router) {
 
     $router->get('service/basic','ServiceAdminController@basic');

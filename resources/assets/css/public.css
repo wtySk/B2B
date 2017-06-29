@@ -1,0 +1,34 @@
+/*公共样式*/
+*{ margin: 0; padding: 0;}
+body{ width: 100%; min-width: 960px; margin: 0 auto; min-height: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+body, div, a, span, form, ul, li, p, h1, h2, h3, h4, h5, h6,dl, dt, dd{ font-size: 12px; font-weight: normal; font-style: normal; font-family: 宋体, "Microsoft Yahei", tahoma, arial;}
+body{ background: #eef5fb; font-family: PingFangSC-Regular, sans-serif ; background: url("../images/content_bj.jpg") no-repeat; background-size: 100%; position: relative;}
+i{ font-style:normal;}
+li{ list-style:none; padding:0; margin:0; }
+a{ text-decoration:none; background: transparent; border: none; outline: none;-webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color:transparent;}
+.clearboth{ zoom: 1;}
+.clearboth:after{ content: ""; display: block; clear: both;}
+::selection { background:#31C37D; color:#FFF;}
+::-moz-selection { background:#31C37D; color:#FFF;}
+
+.content{ width: 100%; min-height: 500px;}
+.bj_b{ position: fixed; top: 0; z-index: 10; width: 100%; height: 100%; background: #000; opacity: 0.25;}
+.bj_10{ position: fixed; top: 0; z-index: 10; width: 100%; height: 100%; background: #000; opacity: 0.25; display: none;}
+.bj_b200{ position: fixed; top: 0; z-index: 200; width: 100%; height: 100%; background: #000; opacity: 0.25;}
+/*底部导航*/
+.total_nav{ width: 100%; height: 1rem; position: fixed; bottom: 0; z-index: 9; background: #fff; border-top: 1px solid #bcbcbc;}
+.total_nav a{ display: inline-block; float: left; text-align: center; font-size: 0.28rem; color: #000; width: 25%; line-height: 1rem;}
+.total_nav a img{ width: 0.4rem; height: 0.4rem; position: relative; top: 0.08rem; right: 0rem;}
+.telephone{ position: fixed; left: 0.3rem; bottom: 2rem; background: rgba(255, 80, 0, 0.8); width: 0.7rem; height: 0.7rem; border-radius: 0.7rem;}
+.telephone img{ width: 0.5rem; height: 0.5rem; margin-top: 0.1rem; margin-left: 0.1rem;}
+.telephone_mine{ position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 200; margin: auto auto; width: 6rem; height: 5rem; border-radius: 6px;}
+.telephone_mine_a{ background: #fff; padding: 0.2rem 0; border-radius: 4px;}
+.theEnd{ height: 1.12rem; text-align: center; line-height: 2.12rem;}
+.telephone_mine_a div{ border: 1px solid #31C37D; width: 80%; height: 0.8rem; margin: 0.8rem auto; border-radius: 3px; line-height: 0.8rem; text-align: center; font-size: 0.3rem; }
+.telephone_mine_a div span{ font-size: 0.3rem;}
+.telephone_mine_a div:nth-child(1){ background: #31C37D; color: #fff;}
+.telephone_mine_a div:nth-child(2){ color: #31C37D;}
+.telephone_mine_a div:nth-child(2) span{ color: #31C37D;}
+.telephone_mine_b{ width: 0.8rem; height: 0.8rem; margin: 0 auto; margin-top: 0.4rem;}
+.telephone_mine_b img{ width: 0.8rem; height: 0.8rem;}
+/*.content_bj{ width: 100%; background: url("../images/bs_bg.png") repeat-x; background-size: 64% auto; background-position: bottom;}*/
