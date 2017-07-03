@@ -64,6 +64,10 @@ class JourneyController extends Controller
             $grid->column('product.title','产品');
             $grid->title('标题');
             $grid->description('描述');
+            $grid->disableCreation();
+            $grid->filter(function ($filter){
+                $filter->like('product.title', '标签');
+            });
         });
     }
     protected function form($id ='')
@@ -82,6 +86,9 @@ class JourneyController extends Controller
                 });
             });
 
+            $form->saved(function (Form $form){
+                return redirect('/admin/product/'.$form->input("product_id").'/edit#tab-form-7');
+            });
         });
     }
 

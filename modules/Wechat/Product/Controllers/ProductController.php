@@ -181,8 +181,10 @@ class ProductController extends Controller
             $form->tab('行程',function () use($form){
 
                 $form->hasMany('journey',function (Form\NestedForm $form){
-                    $form->text('title','行程标题')->readOnly();
-                    $form->text('description','描述信息')->readOnly();
+                    $form->display('title','行程标题')->readOnly();
+                    $form->display('description','描述信息')->readOnly();
+
+
                     $form->display('id','编辑方案')->with(function ($value) {
                         if($value !=''){
                             return '<input class="journey-edit  btn btn-primary btn-sm" type="button" src="/admin/journey/'.$value.'/edit" value="编辑"></input>';
@@ -206,6 +208,11 @@ class ProductController extends Controller
                 $form->text('schedule','班期说明');
                 $form->text('qrcode','二维码')->help('请出入二维码的地址,前台页面自动生成相应的二维码');
 
+
+            });
+
+            $form->tab('长图片',function () use ($form){
+                $form->image('long_image','长图片');
             });
 
 
